@@ -1,5 +1,6 @@
 import express from "express";
-import upload from "../middlewares/uploadMiddleware";
+import upload from "../middlewares/uploadMiddleware.js";
+import { getFiles, uploadFile } from "../controllers/fileController.js";
 
 const router = express.Router();
 

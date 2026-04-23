@@ -1,9 +1,10 @@
 import File from "../models/fileModel.js";
+import uploadToS3 from "../services/s3service.js";
 
 export const uploadFile = async (req, res) => {
   try {
     const file = req.file;
-    const result = await uploadToS3(file);
+    const result = await uploadToS3(file, "medical");
 
     const savedFile = await File.create({
       fileName: file.originalname,
