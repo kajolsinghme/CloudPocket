@@ -1,5 +1,5 @@
 import File from "../models/fileModel.js";
-import uploadToS3 from "../services/s3service.js";
+import uploadToS3 from "../services/s3Service.js"; 
 
 export const uploadFile = async (req, res) => {
   try {
